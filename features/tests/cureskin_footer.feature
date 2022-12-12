@@ -1,6 +1,5 @@
 # Created by Vitaliy at 12/11/2022
-Feature: # Enter feature name here
-  # Enter feature description here
+Feature: Footer test cases
 
 
   Scenario: User sees Subscribe to email in the footer
