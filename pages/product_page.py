@@ -9,7 +9,7 @@ class ProductPage(Page):
     ADD_TO_CART_BTN = (By.CSS_SELECTOR, ".button[type='submit'], [name='add']")
     CONF_SHOWN = (By.XPATH, "//div[@class='cart-notification focus-inset animate active']"
                             "//h2[contains(text(), 'added to your cart')]")
-    VIEW_MY_CART_BTN = (By.CSS_SELECTOR, "a#cart-notification-button")
+    VIEW_MY_CART_BTN = (By.XPATH, '//*[@class="cart-notification__links"]//a[@href="/cart"]')
     PRODUCT_TITLE = (By.XPATH, '//a[@class="cart-item__name h4 break"]')
 
     def open_collections_page(self):
