@@ -12,6 +12,9 @@ class ProductPage(Page):
     VIEW_MY_CART_BTN = (By.CSS_SELECTOR, "a#cart-notification-button")
     PRODUCT_TITLE = (By.XPATH, '//a[@class="cart-item__name h4 break"]')
 
+    def open_collections_page(self):
+        self.driver.get('https://shop.cureskin.com/collections')
+
     def click_add_to_cart(self):
         self.click(*self.ADD_TO_CART_BTN)
 
@@ -23,7 +26,11 @@ class ProductPage(Page):
 
     def verify_item(self, expected_result):
         actual_result = self.driver.find_element(*self.PRODUCT_TITLE).text
-        assert expected_result == actual_result, f'Error! Actual text {actual_result} does not match expected{expected_result}'
+        assert expected_result == actual_result, \
+            f'Error! Actual text {actual_result} does not match expected{expected_result}'
+
+
+
 
 
 
