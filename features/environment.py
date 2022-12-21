@@ -45,8 +45,8 @@ def browser_init(context, test_name):
 
     # for browerstack ###
     desired_cap = {
-        'browser': 'Chrome',
-        'os_version': '11',
+        'browser': 'Firefox',
+        'os_version': '8',
         'os': 'Windows',
         'name': test_name
     }
