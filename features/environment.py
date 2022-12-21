@@ -7,10 +7,10 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome\
-        (executable_path='C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/chromedriver.exe')
+    # context.driver = webdriver.Chrome\
+    #     (executable_path='C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/chromedriver.exe')
     # context.driver = webdriver.Firefox\
-    #     (executable_path='C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/geckodriver.exe')
+    #     (executable_path='C:\\Users\\Vitaliy\\careerist\\internship\\CureSkin-Automation-project\\geckodriver.exe')
     # context.driver = webdriver.Edge\
     #     (executable_path='C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/msedgedriver.exe')
     # # context.driver = webdriver.Safari()
@@ -28,6 +28,20 @@ def browser_init(context):
     # context.driver = webdriver.Firefox(
     #     firefox_options=options,
     #     executable_path='C:\Users\Vitaliy\careerist\internship\CureSkin-Automation-project\geckodriver.exe')
+
+    # for browerstack ###
+    desired_cap = {
+        'browser': 'Firefox',
+        'os_version': '11',
+        'os': 'Windows',
+        'name': 'test_name'
+    }
+    bs_user = 'vitaliystyranko_obQCqn'
+    bs_key = 'Ta5ZAXTCQR4PBxAFAHy7'
+    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+
+
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
