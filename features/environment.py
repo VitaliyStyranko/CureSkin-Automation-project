@@ -1,7 +1,15 @@
+
+from app.application import Application
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
-from app.application import Application
+from selenium.webdriver.support.events import EventFiringWebDriver
+from support.logger import logger, MyListener
+import allure
+from allure_commons.types import AttachmentType
 
+# Allure command:
+# behave -f allure_behave.formatter:AllureFormatter -o test_results/ features/tests/test_name.feature
+# allure serve test_results
 
 def browser_init(context, test_name):
 
@@ -25,25 +33,18 @@ def browser_init(context, test_name):
     #     chrome_options=options,
     #     executable_path='C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/chromedriver.exe')
 
-    ## HEADLESS MODE FIREFOX ##
-    # options = webdriver.FirefoxOptions()
-    # options.add_argument('-headless')
-    # context.driver = webdriver.Firefox(
-    #     firefox_options=options,
-    #     executable_path='C:\Users\Vitaliy\careerist\internship\CureSkin-Automation-project\geckodriver.exe')
-
 
     ### EventFiringWebDriver - log file ##
     ## for drivers ##
     # context.driver = EventFiringWebDriver(
     #     webdriver.Chrome(executable_path=
-    #                      'C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/chromedriver.exe')
+    #                      'C:/Users/Vitaliy/careerist/internship/CureSkin-Automation-project/chromedriver.exe'),
     #     MyListener())
 
     # for headless mode ###
     # context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options = options), MyListener())
 
-    # for browerstack ###
+    # for BrowserStack ###
     desired_cap = {
         'browser': 'Firefox',
         'os_version': '8',
@@ -63,16 +64,20 @@ def browser_init(context, test_name):
 
 
 def before_scenario(context, scenario):
-    print('\nStarted scenario: ', scenario.name)
+    # print('\nStarted scenario: ', scenario.name)
+    logger.info(f'Started scenario: {scenario.name}')
     browser_init(context, scenario.name)
 
 
 def before_step(context, step):
-    print('\nStarted step: ', step)
+    # print('\nStarted step: ', step)
+    logger.info(f'Started step: {step}')
+
 
 
 def after_step(context, step):
     if step.status == 'failed':
+        logger.error(f'Step failed: {step}')
         print('\nStep failed: ', step)
 
 
