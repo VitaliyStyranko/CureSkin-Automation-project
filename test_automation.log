@@ -1,0 +1,62 @@
+2022-12-21 22:53:58,176 - support.logger - INFO - Started scenario: Cart has correct product information
+2022-12-21 22:53:59,301 - support.logger - INFO - Started step: <given "Open Product Details cureskin-cleansing-gel page">
+2022-12-21 22:54:00,046 - support.logger - INFO - Started step: <when "Click to add product to cart">
+2022-12-21 22:54:00,046 - support.logger - INFO - Searching by css selector '.button[type='submit'], [name='add']'...
+2022-12-21 22:54:00,054 - support.logger - INFO - Found by css selector '.button[type='submit'], [name='add']'
+2022-12-21 22:54:00,111 - support.logger - INFO - Started step: <when "Verify added to your cart confirmation is shown">
+2022-12-21 22:54:00,111 - support.logger - INFO - Searching by xpath '//div[@class='cart-notification focus-inset animate active']//h2[contains(text(), 'added to your cart')]'...
+2022-12-21 22:54:00,522 - support.logger - INFO - Found by xpath '//div[@class='cart-notification focus-inset animate active']//h2[contains(text(), 'added to your cart')]'
+2022-12-21 22:54:00,522 - support.logger - INFO - Started step: <then "Open cart page">
+2022-12-21 22:54:00,523 - support.logger - INFO - Searching by xpath '//*[@class="cart-notification__links"]//a[@href="/cart"]'...
+2022-12-21 22:54:00,529 - support.logger - INFO - Found by xpath '//*[@class="cart-notification__links"]//a[@href="/cart"]'
+2022-12-21 22:54:00,937 - support.logger - INFO - Started step: <then "Verify CureSkin Cleansing Gel is in the cart">
+2022-12-21 22:54:00,937 - support.logger - INFO - Searching by xpath '//a[@class="cart-item__name h4 break"]'...
+2022-12-21 22:54:00,985 - support.logger - INFO - Found by xpath '//a[@class="cart-item__name h4 break"]'
+2022-12-21 22:54:33,690 - support.logger - INFO - Started scenario: User can access the product page from the Collection page
+2022-12-21 22:54:34,808 - support.logger - INFO - Started step: <given "Open Collections page">
+2022-12-21 22:54:35,417 - support.logger - INFO - Started step: <when "Click on a Body collection link">
+2022-12-21 22:54:35,417 - support.logger - INFO - Searching by xpath '//a[@href='/collections/body']//h2[contains(text(),'Body')]'...
+2022-12-21 22:54:35,424 - support.logger - INFO - Found by xpath '//a[@href='/collections/body']//h2[contains(text(),'Body')]'
+2022-12-21 22:54:35,969 - support.logger - INFO - Started step: <then "Verify the user is taken to the products page">
+2022-12-21 22:54:44,728 - support.logger - INFO - Started scenario: User sees Subscribe to email in the footer
+2022-12-21 22:54:45,829 - support.logger - INFO - Started step: <given "Open main page">
+2022-12-21 22:54:46,995 - support.logger - INFO - Started step: <then "Verify Subscribe to email visible in the footer">
+2022-12-21 22:54:46,995 - support.logger - INFO - Searching by xpath '//div[@class='footer-block__newsletter']//h2[@class='footer-block__heading']'...
+2022-12-21 22:54:47,002 - support.logger - INFO - Found by xpath '//div[@class='footer-block__newsletter']//h2[@class='footer-block__heading']'
+2022-12-21 22:54:47,028 - support.logger - ERROR - Step failed: <then "Verify Subscribe to email visible in the footer">
+2022-12-21 22:54:49,146 - support.logger - INFO - Started scenario: Contact Info is visible in the footer
+2022-12-21 22:54:50,271 - support.logger - INFO - Started step: <given "Open main page">
+2022-12-21 22:54:51,469 - support.logger - INFO - Started step: <then "Verify Contact Info is visible in the footer">
+2022-12-21 22:54:51,469 - support.logger - INFO - Searching by xpath '//div[@class='footer-block grid__item']//h2[@class='footer-block__heading']'...
+2022-12-21 22:54:51,477 - support.logger - INFO - Found by xpath '//div[@class='footer-block grid__item']//h2[@class='footer-block__heading']'
+2022-12-21 22:54:51,502 - support.logger - ERROR - Step failed: <then "Verify Contact Info is visible in the footer">
+2022-12-22 17:05:06,709 - support.logger - INFO - Started scenario: Cart has correct product information
+2022-12-22 17:05:10,399 - support.logger - INFO - Started step: <given "Open Product Details cureskin-cleansing-gel page">
+2022-12-22 17:05:12,348 - support.logger - INFO - Started step: <when "Click to add product to cart">
+2022-12-22 17:05:13,024 - support.logger - INFO - Started step: <when "Verify added to your cart confirmation is shown">
+2022-12-22 17:05:13,710 - support.logger - INFO - Started step: <then "Open cart page">
+2022-12-22 17:05:15,161 - support.logger - INFO - Started step: <then "Verify CureSkin Cleansing Gel is in the cart">
+2022-12-22 17:17:45,893 - support.logger - INFO - Started scenario: Cart has correct product information
+2022-12-22 17:17:49,760 - support.logger - INFO - Started step: <given "Open Product Details cureskin-cleansing-gel page">
+2022-12-22 17:17:51,518 - support.logger - INFO - Started step: <when "Click to add product to cart">
+2022-12-22 17:17:52,386 - support.logger - INFO - Started step: <when "Verify added to your cart confirmation is shown">
+2022-12-22 17:17:53,042 - support.logger - INFO - Started step: <then "Open cart page">
+2022-12-22 17:17:54,472 - support.logger - INFO - Started step: <then "Verify CureSkin Cleansing Gel is in the cart">
+2022-12-22 17:18:09,282 - support.logger - INFO - Started scenario: Cart has correct product information
+2022-12-22 17:18:22,354 - support.logger - INFO - Started step: <given "Open Product Details cureskin-cleansing-gel page">
+2022-12-22 17:18:24,609 - support.logger - INFO - Started step: <when "Click to add product to cart">
+2022-12-22 17:18:25,256 - support.logger - INFO - Started step: <when "Verify added to your cart confirmation is shown">
+2022-12-22 17:18:25,711 - support.logger - INFO - Started step: <then "Open cart page">
+2022-12-22 17:18:26,808 - support.logger - INFO - Started step: <then "Verify CureSkin Cleansing Gel is in the cart">
+2022-12-22 17:24:07,986 - support.logger - INFO - Started scenario: User can access the product page from the Collection page
+2022-12-22 17:24:13,997 - support.logger - INFO - Started step: <given "Open Collections page">
+2022-12-22 17:24:15,587 - support.logger - INFO - Started step: <when "Click on a Body collection link">
+2022-12-22 17:24:17,215 - support.logger - INFO - Started step: <then "Verify the user is taken to the products page">
+2022-12-22 17:25:08,989 - support.logger - INFO - Started scenario: User sees Subscribe to email in the footer
+2022-12-22 17:25:15,434 - support.logger - INFO - Started step: <given "Open main page">
+2022-12-22 17:25:18,018 - support.logger - INFO - Started step: <then "Verify Subscribe to email visible in the footer">
+2022-12-22 17:25:18,335 - support.logger - ERROR - Step failed: <then "Verify Subscribe to email visible in the footer">
+2022-12-22 17:26:19,910 - support.logger - INFO - Started scenario: Contact Info is visible in the footer
+2022-12-22 17:26:24,314 - support.logger - INFO - Started step: <given "Open main page">
+2022-12-22 17:26:26,725 - support.logger - INFO - Started step: <then "Verify Contact Info is visible in the footer">
+2022-12-22 17:26:27,013 - support.logger - ERROR - Step failed: <then "Verify Contact Info is visible in the footer">
