@@ -45,17 +45,39 @@ def browser_init(context, test_name):
     # context.driver = EventFiringWebDriver(webdriver.Chrome(chrome_options = options), MyListener())
 
     # for BrowserStack ###
+    # desired_cap = {
+    #     'browser': 'Firefox',
+    #     'os_version': '8',
+    #     'os': 'Windows',
+    #     'name': test_name
+    # }
+    # bs_user = 'vitaliystyranko_obQCqn'
+    # bs_key = 'Ta5ZAXTCQR4PBxAFAHy7'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+
     desired_cap = {
-        'browser': 'Firefox',
-        'os_version': '8',
-        'os': 'Windows',
+        'bstack:options': {
+            "os": "OS X",
+            "osVersion": "Ventura",
+            "browserVersion": "latest",
+            "projectName": "CureSkin-Automation-project",
+            "buildName": "Footer test cases",
+            "local": "false",
+            "networkLogs": "true",
+            "seleniumVersion": "3.14.0",
+        },
+        "browserName": "Safari",
         'name': test_name
     }
+
     bs_user = 'vitaliystyranko_obQCqn'
     bs_key = 'Ta5ZAXTCQR4PBxAFAHy7'
     url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
     context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    context.app = Application(context.driver)
+
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
